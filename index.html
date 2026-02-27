@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FluentLab AI</title>
+  <title>FluentLab - Learn Languages with AI</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f6f9;
+    }
+
+    header {
+      background-color: #4A90E2;
+      color: white;
+      padding: 30px;
+    }
+
+    textarea {
+      width: 60%;
+      height: 120px;
+      padding: 10px;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 25px;
+      margin-top: 15px;
+      font-size: 16px;
+      background-color: #4A90E2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+
+    #response {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to FluentLab 🌍</h1>
-  <p>Your AI language learning platform.</p>
+
+<header>
+  <h1>FluentLab 🌍</h1>
+  <p>Your AI Language Learning Platform</p>
+</header>
+
+<h2>Practice Your English</h2>
+<p>Write a sentence and get instant correction.</p>
+
+<textarea id="userInput" placeholder="Write your sentence in English..."></textarea>
+<br>
+<button onclick="sendMessage()">Check Sentence</button>
+
+<p id="response"></p>
+
+<script>
+function sendMessage() {
+  const message = document.getElementById("userInput").value;
+  if(message === "") {
+    document.getElementById("response").innerText = "Please write something first.";
+    return;
+  }
+  let response = "Corrected version: " + message;
+  document.getElementById("response").innerText = response;
+}
+</script>
+
+<footer>
+  © 2026 FluentLab - Built with ❤️ by Oumaima
+</footer>
+
 </body>
 </html>
